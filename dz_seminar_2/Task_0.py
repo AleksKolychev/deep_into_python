@@ -91,3 +91,5 @@ if __name__ == '__main__':
     is_flag = True
     while is_flag:
         balance, is_flag = menu(balance, count, is_flag)
+
+        

@@ -18,7 +18,7 @@ num = int(input("Введите целое число: "))
 hex_str = to_hex(num)
 print(f"Шестнадцатеричное представление числа {num}: {hex_str}")
 
-
+# Проверка функцией hex
 hex_num = hex(num)
 print(f"Шестнадцатеричное представление числа {num}:", hex_num)
 
