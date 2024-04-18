@@ -1,4 +1,5 @@
-"""Возьмите задачу о банкомате из семинара 2. Разбейте её на отдельные операции — функции. 
+"""Возьмите задачу о банкомате из семинара 2.
+Разбейте её на отдельные операции — функции.
 Дополнительно сохраняйте все операции поступления и снятия средств в список."""
 
 
@@ -11,6 +12,7 @@ MAX_COMISSION = Decimal('600')
 BONUS = Decimal('0.03')
 LIMIT_BEFORE_TAX = Decimal('5000000')
 TAX_RATE = Decimal('0.1')
+
 
 def menu(balance: Decimal, count: int, is_flag: bool, operations: list):
     dct = {'1': 'пополнить счет',
@@ -55,13 +57,13 @@ def get_money(balance: Decimal):
             procent = MAX_COMISSION
 
         if money_to_get + procent <= balance:
-            operation = f'Снятие: {money_to_get}, Комиссия: {procent.normalize().to_eng_string()}'
+            operation = f'Снятие: {money_to_get}, 
+                          Комиссия: {procent.normalize().to_eng_string()}'
             return balance - (money_to_get + procent), operation
         else:
             print('Недостаточно средств для снятия')
             return balance, None
 
-    
     else:
         print('Ошибка, сумма должна быть кратна 50')
         return balance, None
