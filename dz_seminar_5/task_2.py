@@ -12,7 +12,7 @@ def generate_salary_dict(names_list, salaries_list, bonuses_list):
 
 
 names = ["Aleks", "Julia", "Helene", "Andrew"]
-salaries = [50000, 55000, 65000, 90000]
+salaries = [10000, 15000, 20000, 25000]
 bonuses = ["10%", "15%", "20%", "25%"]
 
 salary_dict = generate_salary_dict(names, salaries, bonuses)
