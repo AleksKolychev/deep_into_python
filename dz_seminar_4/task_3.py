@@ -28,7 +28,7 @@ def menu(balance: Decimal, count: int, is_flag: bool, operations: list):
         balance *= (1 - TAX_RATE)
     choice = input('Введите команду: ')
     if choice == '3':
-        print(balance)
+        print(f'Баланс: {balance}')
         return balance, is_flag == False
     elif choice == '1':
         balance, operation = give_money(balance)
@@ -57,8 +57,7 @@ def get_money(balance: Decimal):
             procent = MAX_COMISSION
 
         if money_to_get + procent <= balance:
-            operation = f'Снятие: {money_to_get}, 
-                          Комиссия: {procent.normalize().to_eng_string()}'
+            operation = str(f'Снятие: {money_to_get}, Комиссия: {procent.normalize().to_eng_string()}')
             return balance - (money_to_get + procent), operation
         else:
             print('Недостаточно средств для снятия')
